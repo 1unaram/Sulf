@@ -7,7 +7,7 @@ import './styles/Main.css';
 
 const Main = () => {
     return (
-        <div className="root">
+        <div className="main">
 
             <header>
                 <div class="inner">
@@ -17,7 +17,7 @@ const Main = () => {
 
                     <ul class="util">
                         <li><a href="login.html">Login</a></li>
-                        <li><a href="signup.html">Join</a></li>
+                        {/* <li><a href="signup.html">Join</a></li> */}
                         <li><a href="aboutus.html">About us</a></li>
                         <li><a href="#">Service</a></li>
                     </ul>
@@ -37,11 +37,12 @@ const Main = () => {
             <nav>
                 <div class="inner">
                     <ul id="gnb">
-                        <li class="item"><a href="howtouse.html">사이트 안내</a></li>
-                        <li class="border"></li>
-                        <li class="item"><a href="#">분류</a></li>
-                        <li class="border"></li>
-                        <li class="item"><a href="#">마이페이지</a></li>
+                        <li><a href="">사이트 안내</a></li>
+                        {/* <li class="border"></li> */}
+                        <li><a href="#">분류</a></li>
+                        {/* <li class="border"></li> */}
+                        <li><a href="#">설문   등록</a></li>
+                        <li><a href="#">마이페이지</a></li>
                     </ul>
                 </div>
             </nav>

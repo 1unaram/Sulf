@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 
 /* 컴포넌트 연결 */
 import './App.css';

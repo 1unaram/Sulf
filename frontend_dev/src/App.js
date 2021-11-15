@@ -1,15 +1,22 @@
-// import logo from './logo.svg';
+/* App.js */
 
-/* 컴포넌트 연결 */
+// 컴포넌트 연결
 import './App.css';
 import Main from './Components/Main.js';
+import Login from './Components/Login.js';
+import Aboutus from './Components/Aboutus.js';
+
+// 라우터
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <div className="App">
-
-      <Main />
-
+      <Routes>
+        <Route path="/" element={<Main />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/aboutus" element={<Aboutus />} />
+      </Routes>
     </div>
   );
 }

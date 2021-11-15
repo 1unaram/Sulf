@@ -1,22 +1,36 @@
+/* 로그인 페이지 */
+
 import React from 'react'
+import { Link } from 'react-router-dom';
+
+// 컴포넌트 연결
+import './styles/Login.css';
 
 const Login = () => {
     return (
-        <div>
+        <div className="login">
 
             <header>
-                <div class="item"><a href="#">로그인</a></div>
+                <div className="inner">
+                    <div className="logo"><Link to="/login">로그인</Link></div>
+
+                    <ul className="util">
+                        <li><Link to="/">Home</Link></li>
+                        <li><Link to="/aboutus">About us</Link></li>
+                        <li><Link to="#">Service</Link></li>
+                    </ul>
+                </div>
             </header>
 
             <section>
-                <div class="box">
-                    <div class="item"><a href="#">카카오톡으로 로그인</a></div>
-                    <div class="item"><a href="#">이메일로 로그인</a></div>
+                <div className="box">
+                    <div className="item"><Link to="#"><img src="img/kakao_login.png"></img></Link></div>
+                    <div className="item"><Link to="#"><img src="img/naver_login.png"></img></Link></div>
                 </div>
 
-                <div class="footer">
-                    <p><a href="#">사이트가 처음이세요?</a></p>
-                    <p><a href="signup.html">회원가입</a></p>
+                <div className="footer">
+                    <p><Link to="#">사이트가 처음이세요?</Link></p>
+                    <p><Link to="signup.html">회원가입</Link></p>
                 </div>
             </section>
 

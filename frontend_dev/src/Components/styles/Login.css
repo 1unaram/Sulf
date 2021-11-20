@@ -37,7 +37,7 @@ ol {
 }
 
 .login header .inner .logo a {
-	font: bold 20px/1 "arial";
+	font: bold 1.5rem/1 "arial";
 	color: black;
 }
 
@@ -55,7 +55,7 @@ ol {
 
 .login header .inner .util li a {
 	display: block;
-	font: 12px/1 "arial";
+	font: 0.8rem/1 "arial";
 	color: #999;
 	padding: 0px 10px;
 }

@@ -20,7 +20,7 @@ const Main = () => {
                     <ul className="util">
                         <li><Link to="/login">Login</Link></li>
                         <li><Link to="/aboutus">About us</Link></li>
-                        <li><Link to="#">Service</Link></li>
+                        <li><Link to="/service">Service</Link></li>
                     </ul>
 
                 </div>

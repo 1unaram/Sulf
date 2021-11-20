@@ -50,7 +50,7 @@ ol {
 
 .main header .inner .util li a {
 	display: block;
-	font: 12px/1 "arial";
+	font: 0.8rem/1 "arial";
 	color: #999;
 	padding: 0px 10px;
 }
@@ -71,7 +71,7 @@ ol {
 }
 
 .main figure .inner p {
-	font: bold 20px/2 "arial";
+	font: bold 1.2rem/2 "arial";
 }
 
 /* 네비게이션 바 */
@@ -94,7 +94,7 @@ ol {
 }
 
 .main nav .inner #gnb li a {
-	font: bold 20px/1 "arial";
+	font: bold 1.2rem/1 "arial";
 	color: black;
 }
 
@@ -130,15 +130,14 @@ ol {
 }
 
 .main section .inner .wrapper {
-	width: auto;
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
 }
 
 .main section .inner .item {
-	width: 200px;
-	height: 200px;
+	width: 20vw;
+	height: 20vw;
 	border: 1px solid #8a9cb3;
 	border-radius: 5px;
 	box-shadow: 3px 3px 3px 3px #8a9cb3a9;

@@ -27,7 +27,10 @@ const Service = () => {
                     <p>FAQ</p>
                 </div>
                 
-                <ul>
+                <ul className="box2">
+                    <li></li>
+                    <li></li>
+                    <li></li>
                     <li></li>
                 </ul>
             </section>
@@ -35,6 +38,12 @@ const Service = () => {
             <section className="qna">
                 <div className="box1">
                     <p>Q&A</p>
+                </div>
+
+                <div className="box2">
+                    <textarea className="text"></textarea>
+
+                    <input type="submit" value="등록" className="submit"></input>
                 </div>
             </section>
 

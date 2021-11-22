@@ -1,2 +1,5 @@
-node_modules/
-frontend_dev/node_modules
+## Sulf Ignore File ##
+
+node_modules
+/frontend_dev/node_modules
+/frontend_dev/build

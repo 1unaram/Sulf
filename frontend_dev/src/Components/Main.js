@@ -1,8 +1,9 @@
-// 메인 페이지 
+/* 메인 페이지  */
 
 import React from 'react'
+import { Link } from 'react-router-dom';
 
-/* 컴포넌트 연결 */
+// 컴포넌트 연결
 import './styles/Main.css';
 
 const Main = () => {
@@ -10,50 +11,58 @@ const Main = () => {
         <div className="main">
 
             <header>
-                <div class="inner">
-                    <div class="logo">
-                        <h1><a href="#">Sulf</a></h1>
+                <div className="inner">
+
+                    <div className="logo">
+                        <h1><Link to="/">Sulf</Link></h1>
                     </div>
 
-                    <ul class="util">
-                        <li><a href="login.html">Login</a></li>
-                        {/* <li><a href="signup.html">Join</a></li> */}
-                        <li><a href="aboutus.html">About us</a></li>
-                        <li><a href="#">Service</a></li>
+                    <ul className="util">
+                        <li><Link to="/login">Login</Link></li>
+                        <li><Link to="/aboutus">About us</Link></li>
+                        <li><Link to="/service">Service</Link></li>
                     </ul>
 
                 </div>
             </header>
 
             <figure>
-                <div class="inner">
+                <div className="inner">
                     <p>
                         하나하나 찾아가 부탁하는 설문 멈춰!<br />
-                        너도 하고 나도 하고 우리 함께 Sulf!
+                        나도 하고 너도 하고 우리 함께 "Sulf"
                     </p>
                 </div>
             </figure>
 
             <nav>
-                <div class="inner">
+                <div className="inner">
                     <ul id="gnb">
-                        <li><a href="">사이트 안내</a></li>
-                        {/* <li class="border"></li> */}
-                        <li><a href="#">분류</a></li>
-                        {/* <li class="border"></li> */}
-                        <li><a href="#">설문   등록</a></li>
-                        <li><a href="#">마이페이지</a></li>
+                        <li><Link to="#">사이트 안내</Link></li>
+                        <li className="border"></li>
+                        <li><Link to="#">분류</Link></li>
+                        <li className="border"></li>
+                        <li><Link to="#">설문 등록</Link></li>
+                        <li className="border"></li>
+                        <li><Link to="#">마이페이지</Link></li>
                     </ul>
                 </div>
             </nav>
 
             <section>
-                <div class="inner">
-                    <div class="box">Top3</div>
-                    <div class="wrapper">
-                        <div class="item"></div>
-                        <div class="item"></div>
-                        <div class="item"></div>
+                <div className="inner">
+                    <div className="box">Top3</div>
+
+                    <div className="wrapper">
+                        <div className="item">
+                            <div className="title">설문제목</div>
+                        </div>
+                        <div className="item">
+                            <div className="title">설문제목</div>
+                        </div>
+                        <div className="item">
+                            <div className="title">설문제목</div>
+                        </div>
                     </div>
                 </div>
             </section>

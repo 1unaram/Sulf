@@ -1,7 +1,6 @@
 /* App.js */
 
 // 컴포넌트 연결
-import './App.css';
 import Main from './Components/Main.js';
 import Login from './Components/Login.js';
 import Aboutus from './Components/Aboutus.js';

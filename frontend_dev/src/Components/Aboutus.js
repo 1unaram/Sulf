@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import './styles/Aboutus.css';
+import './styles/Total.css';
 
 const Aboutus = () => {
     return (

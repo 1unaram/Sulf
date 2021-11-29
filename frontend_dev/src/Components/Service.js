@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import './styles/Service.css';
+import './styles/Total.css';
 
 const Service = () => {
     return (
@@ -12,7 +13,7 @@ const Service = () => {
 
             <header>
                 <div className="inner">
-                    <div className="logo"><Link to="/aboutus">Service</Link></div>
+                    <div className="logo"><Link to="/service">Service</Link></div>
 
                     <ul className="util">
                         <li><Link to="/">Home</Link></li>
@@ -26,7 +27,7 @@ const Service = () => {
                 <div className="box1">
                     <p>FAQ</p>
                 </div>
-                
+
                 <ul className="box2">
                     <li></li>
                     <li></li>

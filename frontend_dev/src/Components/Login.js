@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import './styles/Login.css';
+import './styles/Total.css';
 
 const Login = () => {
     return (
@@ -29,8 +30,8 @@ const Login = () => {
                 </div>
 
                 <div className="footer">
-                    <p><Link to="#">사이트가 처음이세요?</Link></p>
-                    <p><Link to="signup.html">회원가입</Link></p>
+                    <p><Link to="#">사이트 이용에 어려움이 있나요?</Link></p>
+                    <p><Link to="#">사이트 이용 방법 보기</Link></p>
                 </div>
             </section>
 

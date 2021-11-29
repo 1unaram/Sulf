@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+@font-face {
+	font-family: "EliceDigitalBaeum_Bold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* 초기화 */
 * {
 	margin: 0px;
@@ -37,7 +45,7 @@ ol {
 }
 
 .login header .inner .logo a {
-	font: bold 1.5rem/1 "arial";
+	font: bold 1.5rem/1 "EliceDigitalBaeum_Bold";
 	color: black;
 }
 
@@ -55,7 +63,7 @@ ol {
 
 .login header .inner .util li a {
 	display: block;
-	font: 0.8rem/1 "arial";
+	font: normal 0.7rem/1 "EliceDigitalBaeum_Bold";
 	color: #999;
 	padding: 0px 10px;
 }
@@ -96,14 +104,14 @@ ol {
 	margin: 10px 10px;
 	padding: 3px 0px;
 	background-color: #ddd;
-	font: normal 14px/1 "arial";
+	font: lighter 14px/1 "EliceDigitalBaeum_Bold";
 }
 
 .login section .footer p:nth-of-type(2) {
 	margin: 10px 10px;
 	padding: 3px 0px;
 	background-color: #ddd;
-	font: bold 14px/1 "arial";
+	font: bold 14px/1 "EliceDigitalBaeum_Bold";
 }
 
 .login section .footer p a {

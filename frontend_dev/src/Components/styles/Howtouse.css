@@ -17,7 +17,7 @@ a {
 }
 
 /* 상단바 */
-.root header {
+.howtouse header {
 	width: 100%;
 	height: 120px;
 	border-bottom: 3px solid #ddd;
@@ -25,19 +25,19 @@ a {
 	justify-content: center;
 }
 
-.root header .item {
+.howtouse header .item {
 	align-self: center;
 	padding: 5px 100px;
 	background-color: #ddd;
 }
 
-.root header .item a {
+.howtouse header .item a {
 	font: bold 22px/1 "arial";
 	color: #444;
 }
 
 /* 본문 */
-.root section {
+.howtouse section {
 	width: 100%;
 	height: 600px;
 	display: flex;
@@ -46,7 +46,7 @@ a {
 	align-items: center;
 }
 
-.root section .box {
+.howtouse section .box {
 	width: 100%;
 	align-self: center;
 	display: flex;
@@ -55,7 +55,7 @@ a {
 	align-items: center;
 }
 
-.root section .box .item {
+.howtouse section .box .item {
 	margin: 20px auto;
 	padding: 5px 0px;
 	width: 700px;

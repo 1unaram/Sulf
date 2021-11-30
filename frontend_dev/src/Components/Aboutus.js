@@ -1,27 +1,23 @@
 /* 사이트, 개발자 소개 */
 
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import './styles/Aboutus.css';
 import './styles/Total.css';
+import PageHeader from '../DetailedComponents/PageHeader.js';
 
 const Aboutus = () => {
     return (
         <div className="aboutus">
 
-            <header>
-                <div className="inner">
-                    <div className="logo"><Link to="/aboutus">About us</Link></div>
-
-                    <ul className="util">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/login">Login</Link></li>
-                        <li><Link to="/service">Service</Link></li>
-                    </ul>
-                </div>
-            </header>
+            <PageHeader
+                title="About us"
+                titleDestination="About us"
+                util={["Home", "My Page", "Service"]}
+                isLogo={false}
+            />
 
             <section className="goal">
                 <div className="box1">

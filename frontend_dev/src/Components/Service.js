@@ -1,27 +1,23 @@
 /* 서비스 */
 
 import React from 'react'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import './styles/Service.css';
 import './styles/Total.css';
+import PageHeader from '../DetailedComponents/PageHeader.js';
 
 const Service = () => {
     return (
         <div className="service">
 
-            <header>
-                <div className="inner">
-                    <div className="logo"><Link to="/service">Service</Link></div>
-
-                    <ul className="util">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/login">Login</Link></li>
-                        <li><Link to="/aboutus">Aboutus</Link></li>
-                    </ul>
-                </div>
-            </header>
+            <PageHeader
+                title="Service"
+                titleDestination="Service"
+                util={["Home", "My Page", "About us"]}
+                isLogo={false}
+            />
 
             <section className="faq">
                 <div className="box1">

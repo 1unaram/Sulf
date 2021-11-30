@@ -1,0 +1,52 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: "EliceDigitalBaeum_Bold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 초기화 */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.postsurvey ul,
+ol {
+	list-style: none;
+}
+
+.postsurvey a {
+	text-decoration: none;
+}
+
+/* 본문 */
+.postsurvey .container {
+	width: 100%;
+	min-height: 600px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.postsurvey .container .inputBox {
+	margin: 20px;
+	width: 60vw;
+	height: 40px;
+	padding: 0 10px;
+	background-color: rgba(156, 171, 194, 0.35);
+	border-radius: 3px;
+}
+.postsurvey .container .submitBtn {
+	width: 50px;
+	height: 40px;
+	background-color: rgb(246, 148, 0);
+	border: none;
+	border-radius: 30px;
+	font: normal 1.2rem EliceDigitalBaeum_Bold;
+}

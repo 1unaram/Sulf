@@ -1,0 +1,19 @@
+.postbox {
+	width: 20vw;
+	height: 20vw;
+	border: 1px solid #8a9cb3;
+	border-radius: 5px;
+	box-shadow: 3px 3px 3px 3px #8a9cb3a9;
+}
+
+.postbox .title {
+	position: relative;
+	top: 20px;
+	width: 100%;
+	height: 20%;
+	background-color: rgba(156, 171, 194, 0.65);
+	color: black;
+	font-family: "EliceDigitalBaeum_Bold";
+	display: flex;
+	align-items: center;
+}

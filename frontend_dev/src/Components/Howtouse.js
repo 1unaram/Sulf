@@ -1,19 +1,22 @@
 /* 사이트 이용 방법 */
 
 import React from 'react'
-import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import './styles/Howtouse.css';
 import './styles/Total.css';
+import PageHeader from '../DetailedComponents/PageHeader.js';
 
 const Howtouse = () => {
     return (
         <div className="howtouse">
 
-            <header>
-                <div class="item"><a href="#">사이트 이용 방법</a></div>
-            </header>
+            <PageHeader
+                title="Sulf 이용 방법"
+                titleDestination="How to use"
+                util={["Home", "My Page", "About us", "Service"]}
+                isLogo={false}
+            />
 
             <section>
                 <div class="box">

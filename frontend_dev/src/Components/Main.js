@@ -6,26 +6,18 @@ import { Link } from 'react-router-dom';
 // 컴포넌트 연결
 import './styles/Main.css';
 import './styles/Total.css';
+import PageHeader from '../DetailedComponents/PageHeader.js';
+import PostBox from '../DetailedComponents/PostBox';
 
 const Main = () => {
     return (
         <div className="main">
 
-            <header>
-                <div className="inner">
-
-                    <div className="logo">
-                        <Link to="/"><img src="img/logo1.png"></img></Link>
-                    </div>
-
-                    <ul className="util">
-                        <li><Link to="/login">Login</Link></li>
-                        <li><Link to="/aboutus">About us</Link></li>
-                        <li><Link to="/service">Service</Link></li>
-                    </ul>
-
-                </div>
-            </header>
+            <PageHeader
+                isLogo={true}
+                titleDestination="Main"
+                util={["Login", "About us", "Service"]}
+            />
 
             <figure>
                 <div className="inner">
@@ -38,12 +30,9 @@ const Main = () => {
                 <div className="inner">
                     <ul id="gnb">
                         <li><Link to="/howtouse">사이트 안내</Link></li>
-                        <li className="border"></li>
-                        <li><Link to="#">분류</Link></li>
-                        <li className="border"></li>
-                        <li><Link to="#">설문 등록</Link></li>
-                        <li className="border"></li>
-                        <li><Link to="#">마이페이지</Link></li>
+                        <li><Link to="/classification">분류</Link></li>
+                        <li><Link to="/postsurvey">설문 등록</Link></li>
+                        <li><Link to="/">마이페이지</Link></li>
                     </ul>
                 </div>
             </nav>
@@ -51,20 +40,14 @@ const Main = () => {
             <section>
                 <div className="inner">
                     <div className="box">
-                        <img src="img/top3.png"></img>
+                        <img src="img/top3.png" alt="top3"></img>
                         <p>Top3</p>
                     </div>
 
                     <div className="wrapper">
-                        <div className="item">
-                            <div className="title">설문제목</div>
-                        </div>
-                        <div className="item">
-                            <div className="title">설문제목</div>
-                        </div>
-                        <div className="item">
-                            <div className="title">설문제목</div>
-                        </div>
+                        <PostBox />
+                        <PostBox />
+                        <PostBox />
                     </div>
                 </div>
             </section>

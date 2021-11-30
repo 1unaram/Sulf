@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: "EliceDigitalBaeum_Bold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 초기화 */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.post ul,
+ol {
+	list-style: none;
+}
+
+.post a {
+	text-decoration: none;
+}
+
+/* 본문 */
+.post .container {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	padding: 3vw 10vw;
+}
+
+.post .container img {
+	width: 30px;
+	margin: 1vw 0;
+}
+
+.post .container .titleBox,
+.idBox,
+.targetBox,
+.periodBox,
+.descriptionBox,
+.urlBox {
+	width: 300px;
+	margin: 1vw 3vw;
+	min-height: 50px;
+	background-color: rgba(156, 171, 194, 0.35);
+	vertical-align: middle;
+}
+
+.post .container .idBox {
+	width: 300px;
+	min-height: 50px;
+}
+.post .container .targetBox {
+	width: 300px;
+	min-height: 50px;
+}
+.post .container .periodBox {
+	width: 300px;
+	min-height: 50px;
+}
+.post .container .descriptionBox {
+	width: 300px;
+	min-height: 50px;
+}
+.post .container .urlBox {
+	width: 300px;
+	min-height: 50px;
+}
+
+.post .container hr {
+	height: 4px;
+	background-color: black;
+	border-radius: 10px;
+}

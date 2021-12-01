@@ -16,28 +16,8 @@ a {
 	text-decoration: none;
 }
 
-/* 상단바 */
-.root header {
-	width: 100%;
-	height: 120px;
-	border-bottom: 3px solid #ddd;
-	display: flex;
-	justify-content: center;
-}
-
-.root header .item {
-	align-self: center;
-	padding: 5px 100px;
-	background-color: #ddd;
-}
-
-.root header .item a {
-	font: bold 22px/1 "arial";
-	color: #444;
-}
-
 /* 본문 */
-.root section {
+.howtouse section {
 	width: 100%;
 	height: 600px;
 	display: flex;
@@ -46,7 +26,7 @@ a {
 	align-items: center;
 }
 
-.root section .box {
+.howtouse section .box {
 	width: 100%;
 	align-self: center;
 	display: flex;
@@ -55,7 +35,7 @@ a {
 	align-items: center;
 }
 
-.root section .box .item {
+.howtouse section .box .item {
 	margin: 20px auto;
 	padding: 5px 0px;
 	width: 700px;

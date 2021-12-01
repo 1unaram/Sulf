@@ -1,5 +1,13 @@
 @charset "utf-8";
 
+@font-face {
+	font-family: "EliceDigitalBaeum_Bold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* 초기화 */
 * {
 	margin: 0px;
@@ -14,50 +22,6 @@ ol {
 
 .aboutus a {
 	text-decoration: none;
-}
-
-/* 상단바 */
-.aboutus header {
-	width: 100%;
-	border-bottom: 3px solid #ddd;
-}
-
-.aboutus header .inner {
-	width: 100%;
-	height: 140px;
-	margin: 0px auto;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
-.aboutus header .inner .logo {
-	padding: 8px 120px;
-	background-color: rgba(242, 198, 42, 1);
-}
-
-.aboutus header .inner .logo a {
-	font: bold 1.5rem/1 "arial";
-	color: black;
-}
-
-.aboutus header .inner .util {
-	position: absolute;
-	top: 0px;
-	right: 0px;
-}
-
-.aboutus header .inner .util li {
-	float: left;
-	border: 1px solid #999;
-	padding: 15px;
-}
-
-.aboutus header .inner .util li a {
-	display: block;
-	font: 0.8rem/1 "arial";
-	color: #999;
-	padding: 0px 10px;
 }
 
 /* 사이트 목표 */
@@ -118,9 +82,8 @@ ol {
 	height: 100%;
 	margin: 30px 40px;
 	display: flex;
-	justify-content:stretch;
+	justify-content: stretch;
 }
-
 
 .aboutus .introduction .box2 .developer {
 	width: 100%;

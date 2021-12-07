@@ -5,9 +5,6 @@ const app = express();
 // portnumber를 8080으로 지정
 app.set('port', process.env.PORT || 8080);
 
-// index 페이지
-// app.use(express.static(path.join(__dirname, '../frontend_dev/build')));
-
 // test 라우트
 const test = require("./Router/test");
 app.use("/api", test);

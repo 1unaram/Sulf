@@ -10,6 +10,7 @@ import PageHeader from '../DetailedComponents/PageHeader.js';
 import PostBox from '../DetailedComponents/PostBox';
 
 const Main = () => {
+
     return (
         <div className="main">
 

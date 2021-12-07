@@ -71,7 +71,7 @@ ol {
 }
 
 .main nav .inner #gnb li a {
-	font: normal 1.4rem/1 "EliceDigitalBaeum_Bold";
+	font: normal 1.6rem/1 "EliceDigitalBaeum_Bold";
 	color: black;
 }
 
@@ -84,6 +84,7 @@ ol {
 .main section {
 	width: 100%;
 	height: 60vh;
+	padding: 0 30px;
 }
 
 .main section .inner {

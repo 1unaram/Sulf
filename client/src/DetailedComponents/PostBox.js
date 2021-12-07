@@ -14,6 +14,7 @@ const PostBox = () => {
         axios.get("/api").then((res) => {
             setPostInfo(res.data);
             setLoading(false);
+            console.log(res);
         })
     }
 

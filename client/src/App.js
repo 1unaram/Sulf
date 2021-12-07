@@ -1,4 +1,5 @@
 /* App.js */
+import React from 'react';
 
 // 컴포넌트 연결
 import Main from './Components/Main';

@@ -8,7 +8,7 @@ import Aboutus from './Components/Aboutus';
 import Service from './Components/Service';
 import Howtouse from './Components/Howtouse';
 import Postsurvey from './Components/Postsurvey';
-import Mypage from './Components/Postsurvey';
+import Mypage from './Components/Mypage';
 import Post from './Components/Post';
 import Classification from './Components/Classification';
 

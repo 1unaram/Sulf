@@ -30,7 +30,7 @@ const PageHeader = (
 
                 {isLogo ?
                     <div className={style.logo}>
-                        <Link to="/"><img src="img/logo1.png" alt="main_logo"></img></Link>
+                        <Link to="/"><img src="img/logo/logo1.png" alt="main_logo"></img></Link>
                     </div>
                     :
                     <div className={style.title}>

@@ -5,7 +5,6 @@ import React from 'react'
 
 // 컴포넌트 연결
 import './styles/Service.css';
-import './styles/Total.css';
 import PageHeader from '../DetailedComponents/PageHeader.js';
 
 const Service = () => {

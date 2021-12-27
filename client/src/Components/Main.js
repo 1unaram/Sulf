@@ -12,13 +12,11 @@ import style from './styles/Main.module.css';
 
 const Main = () => {
 
-    const [loading, setLoading] = useState(true);   // 데이터 로딩 처리
     const [postInfo, setPostInfo] = useState([]);
 
     const callPost = async () => {
         axios.get("/postReq").then((res) => {
             setPostInfo(res.data.data);
-            setLoading(false);
         })
     }
 
@@ -64,8 +62,7 @@ const Main = () => {
                         {postInfo.map((post) => (
                             <PostBox
                                 key={post.id}
-                                title={loading ? "loading...." : post.title}
-                                category={post.category}
+                                postInfo = {post}
                             />
                         ))}
                     </div>

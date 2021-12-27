@@ -1,12 +1,18 @@
 const express = require('express');
 const app = express();
+const cors = require('cors')
 
 // portnumber를 8080으로 지정
 app.set('port', process.env.PORT || 8080);
 
 // test 라우트
 const test = require("./Router/test");
-app.use("/api", test);
+app.use("/postReq", test);
+
+// post 테스트
+app.use(cors());
+const test2 = require("./Router/postTest");
+app.use("/sendPost", test2);
 
 const id = require("./Router/id");
 app.use("/idReq", id);

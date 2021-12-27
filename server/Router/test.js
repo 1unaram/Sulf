@@ -1,19 +1,11 @@
 const express = require("express");
 const router = express.Router();
 
+const fs = require("fs");
+const data = JSON.parse(fs.readFileSync("./Router/testData.json", "utf8"));
+
 router.get("/", (req, res) => {
-    res.json([
-        {
-            id: 1,
-            title: "Sulf 설문조사123",
-            target: "대학생",
-        },
-        {
-            id: 2,
-            title: "Sulf 설문조사124",
-            target: "대학생2",
-        },
-    ]);
+    res.send(data);
 });
 
 module.exports = router;

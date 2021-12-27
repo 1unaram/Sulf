@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import './styles/Login.css';
-import './styles/Total.css';
 import PageHeader from '../DetailedComponents/PageHeader.js';
 
 const Login = () => {

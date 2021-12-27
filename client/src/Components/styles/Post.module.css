@@ -43,31 +43,37 @@ ol {
 .periodBox,
 .descriptionBox,
 .urlBox {
-	width: 300px;
 	margin: 1vw 3vw;
 	min-height: 50px;
 	background-color: rgba(156, 171, 194, 0.35);
-	vertical-align: middle;
+	display: flex;
+	align-items: center;
+	font-family: "EliceDigitalBaeum_Bold";
+}
+
+.post .container .titleBox {
+	width: 400px;
+	min-height: 50px;
 }
 
 .post .container .idBox {
-	width: 300px;
+	width: 400px;
 	min-height: 50px;
 }
 .post .container .targetBox {
-	width: 300px;
+	width: 400px;
 	min-height: 50px;
 }
 .post .container .periodBox {
-	width: 300px;
+	width: 400px;
 	min-height: 50px;
 }
 .post .container .descriptionBox {
-	width: 300px;
+	width: 400px;
 	min-height: 50px;
 }
 .post .container .urlBox {
-	width: 300px;
+	width: 400px;
 	min-height: 50px;
 }
 

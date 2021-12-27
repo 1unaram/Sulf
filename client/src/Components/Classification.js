@@ -1,6 +1,7 @@
 /* 설문 분류 페이지 */
 
-import React from 'react'
+import React, { useEffect, useState } from 'react';
+import axios from "axios";
 
 // 컴포넌트 연결
 import style from './styles/Classification.module.css';
@@ -8,6 +9,19 @@ import PageHeader from '../DetailedComponents/PageHeader.js';
 import PostBox from '../DetailedComponents/PostBox';
 
 const Classification = () => {
+
+    const [postInfo, setPostInfo] = useState([]);
+
+    const callPost = async () => {
+        axios.get("/postReq").then((res) => {
+            setPostInfo(res.data.data);
+        })
+    }
+
+    useEffect(() => {
+        callPost();
+    }, []);
+
     return (
         <div className={style.classfication}>
             <PageHeader
@@ -36,9 +50,12 @@ const Classification = () => {
                 </div>
 
                 <div className={style.postWrapper}>
-                    <PostBox />
-                    <PostBox />
-                    <PostBox />
+                    {postInfo.map((post) => (
+                        <PostBox
+                            key={post.id}
+                            postInfo={post}
+                        />
+                    ))}
                 </div>
             </section>
         </div >

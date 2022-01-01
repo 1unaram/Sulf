@@ -13,7 +13,7 @@ const Classification = () => {
     const [postInfo, setPostInfo] = useState([]);
 
     const callPost = async () => {
-        axios.get("/postReq").then((res) => {
+        await axios.get("/postReq").then((res) => {
             setPostInfo(res.data.data);
         })
     }

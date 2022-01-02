@@ -8,7 +8,7 @@ import PageHeader from '../DetailedComponents/PageHeader.js';
 
 const Post = () => {
 
-    const postInfo = useLocation(); 
+    const postInfo = useLocation();
 
     return (
         <div className={style.post}>
@@ -22,7 +22,7 @@ const Post = () => {
             <div className={style.container}>
 
                 <img src="img/back.png" alt="back_png"></img>
-                
+
                 <div className={style.titleBox}>{postInfo.state.title}</div>
                 <div className={style.idBox}>{postInfo.state.id}</div>
                 <hr />
@@ -30,7 +30,6 @@ const Post = () => {
                 <div className={style.periodBox}>{postInfo.state.deadline}</div>
                 <div className={style.descriptionBox}>{postInfo.state.description}</div>
                 <div className={style.urlBox}>{postInfo.state.url}</div>
-
             </div>
         </div>
     )

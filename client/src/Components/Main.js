@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 import PageHeader from '../DetailedComponents/PageHeader.js';
 import PostBox from '../DetailedComponents/PostBox';
 import style from './styles/Main.module.css';
-import '../api/CallPost';
 
 const Main = () => {
 

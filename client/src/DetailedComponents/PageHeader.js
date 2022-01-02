@@ -15,7 +15,7 @@ const PageHeader = (
     }) => {
 
     const destination = {
-        "Home": "/",
+        "Home": "/main",
         "Login": "/login",
         "My Page": "/mypage",
         "About us": "/aboutus",

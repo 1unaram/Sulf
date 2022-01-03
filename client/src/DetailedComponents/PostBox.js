@@ -10,13 +10,13 @@ const PostBox = ({ postInfo }) => {
 
     return (
         <div className={style.postbox}>
-            <Link 
-                to={ `/post?id=${postInfo.id}` }
-                state= {postInfo}
+            <Link
+                to={`/post?id=${postInfo.id}`}
+                state={postInfo}
             >
                 <div className={style.container}>
                     <div className={style.title}>{postInfo ? postInfo.title : "loading..."}</div>
-                    
+
                     <img className={style.icon} src={`img/classification/${postInfo.category}.png`} alt="category icon"></img>
                 </div>
             </Link>

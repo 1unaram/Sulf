@@ -45,18 +45,24 @@ ol {
 	width: 30vw;
 	height: 50px;
 	margin: 0 5px;
+	padding: 0 5px;
 	border: 2px solid #ddd;
 	border-radius: 5px;
 	font: normal 1rem/1 "EliceDigitalBaeum_Regular";
 }
 
-.classfication .serchContainer .submitBtn {
+.classfication .serchContainer .btn {
 	width: 4vw;
 	height: 50px;
 	border: none;
 	border-radius: 5px;
 	font: normal 1rem/1 "EliceDigitalBaeum_Bold";
-	background-color: #f2c624;
+	background-color: rgb(242, 198, 36);
+}
+
+.classfication .serchContainer .btn:active {
+	box-shadow: inset -2px -2px 3px rgba(242, 198, 36, 0.6),
+		inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
 .classfication .list {
@@ -106,8 +112,15 @@ ol {
 	width: 30px;
 }
 
+.postboxContainer {
+	display: flex;
+	justify-content: center;
+}
+
 .postboxContainer .postWrapper {
+	margin: 0 30px;
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: space-around;
+	justify-content: flex-start;
+	/* align-content: space-around; */
 }

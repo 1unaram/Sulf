@@ -68,7 +68,7 @@ ol {
 
 .inner img {
 	width: 20vw;
-	margin: 10px 0;
+	margin-top: 10px;
 }
 
 .inner .linkGroup {
@@ -84,4 +84,13 @@ ol {
 	border: 1px solid #8a9cb3;
 	border-radius: 1.2vw;
 	box-shadow: 3px 3px 3px 3px #8a9cb3a9;
+	color: rgba(0, 0, 0, 0.59);
+	font-weight: bold;
+	transition-duration: 0.3s;
+}
+
+.inner .linkGroup div:active {
+	margin-left: 5px;
+	margin-top: 5px;
+	box-shadow: none;
 }

@@ -10,17 +10,25 @@ import PostBox from '../DetailedComponents/PostBox';
 
 const Classification = () => {
 
+    // 서버로부터 설문 조사 정보 받아오기
     const [postInfo, setPostInfo] = useState([]);
-
     const callPost = async () => {
         await axios.get("/postReq").then((res) => {
             setPostInfo(res.data.data);
         })
     }
-
     useEffect(() => {
         callPost();
     }, []);
+
+    // 검색 기능 구현
+    const [serchField, setSerchField] = useState("");
+    const [filteredPosts, setFilteredPosts] = useState([]);
+    useEffect(() => {
+        setFilteredPosts(() =>
+            postInfo.filter((post) => post.description.toLowerCase().includes(serchField.toLowerCase()))
+        );
+    }, [serchField, postInfo]);
 
     return (
         <div className={style.classfication}>
@@ -30,10 +38,14 @@ const Classification = () => {
                 util={["Home", "My Page", "About us", "Service"]}
             />
 
-            <form className={style.serchContainer}>
-                <input className={style.inputBox} type="text" placeholder="제목 키워드" />
-                <input className={style.submitBtn} type="submit" value="검색" />
-            </form>
+            <div className={style.serchContainer}>
+                <input
+                    className={style.inputBox}
+                    type="text"
+                    placeholder="제목 키워드"
+                    onChange={(e) => setSerchField(e.target.value)} />
+                <button className={style.btn}>검색</button>
+            </div>
 
             <ul className={style.list}>
                 <li className={style.item}><p>전체</p></li>
@@ -50,12 +62,16 @@ const Classification = () => {
                 </div>
 
                 <div className={style.postWrapper}>
-                    {postInfo.map((post) => (
-                        <PostBox
-                            key={post.id}
-                            postInfo={post}
-                        />
-                    ))}
+                    {(serchField ?
+                        filteredPosts
+                        :
+                        postInfo).map((post) => (
+                            <PostBox
+                                key={post.id}
+                                postInfo={post}
+                                className={style.postbox}
+                            />
+                        ))}
                 </div>
             </section>
         </div >

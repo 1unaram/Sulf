@@ -65,6 +65,17 @@
             "url": "https://youtube.com",
             "category": "social",
             "views": "4"
+        },
+        {
+            "title": "후문 폐쇄 설문조사",
+            "id": "106",
+            "date": "2022-01-07",
+            "target": "중앙대 기숙사 거주생",
+            "deadline": "2022-02-28",
+            "description": "학기 중 서울캠 후문 폐쇄에 대한 의견을 듣고자 하는 설문조사입니다. ",
+            "url": "https://cau.ac.kr",
+            "category": "etc",
+            "views": "7"
         }
     ]
 }

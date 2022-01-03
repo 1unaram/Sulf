@@ -8,6 +8,14 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "EliceDigitalBaeum_Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* 초기화 */
 * {
 	margin: 0px;
@@ -41,7 +49,12 @@ ol {
 }
 
 .main figure .inner p {
-	font: normal 1.4rem/2 "EliceDigitalBaeum_Bold";
+	font: bold 1.4rem/2 "EliceDigitalBaeum_Regular";
+	display: inline;
+}
+
+.main figure .inner p p {
+	color: #0446ef;
 }
 
 /* 네비게이션 바 */

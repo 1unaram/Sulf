@@ -29,6 +29,7 @@ const Main = () => {
         axios.get("/postReq")
             .then((res) => {
                 setPostInfos(res.data.data);
+                console.log(res.data);
             })
             .then(setLoading(false));
     };

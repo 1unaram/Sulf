@@ -23,6 +23,7 @@
   },
   "homepage": "https://github.com/1unaram/Sulf#readme",
   "dependencies": {
+    "body-parser": "^1.19.1",
     "concurrently": "^6.5.1",
     "cors": "^2.8.5",
     "express": "^4.17.1",

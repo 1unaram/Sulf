@@ -2,6 +2,7 @@
 import React from 'react';
 
 // 컴포넌트 연결
+import Home from './Components/Home'
 import Main from './Components/Main';
 import Login from './Components/Login';
 import Aboutus from './Components/Aboutus';
@@ -24,7 +25,8 @@ function App() {
     <div className="App">
       <Router>
         <Routes>
-          <Route path="/" element={<Main />} />
+          <Route path="/" element={<Home />} />
+          <Route path="/main" element={<Main />} />
           <Route path="/login" element={<Login />} />
           <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/service" element={<Service />} />

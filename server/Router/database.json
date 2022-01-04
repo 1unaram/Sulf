@@ -1,0 +1,6 @@
+{
+    "host": "localhost", //aws host입력
+    "user": "root",
+    "password": "dbstjr66",
+    "database": "sulfData"
+}

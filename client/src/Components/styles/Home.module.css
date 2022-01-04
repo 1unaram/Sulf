@@ -1,0 +1,96 @@
+@charset "utf-8";
+
+@font-face {
+	font-family: "EliceDigitalBaeum_Bold";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "EliceDigitalBaeum_Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* 초기화 */
+* {
+	margin: 0px;
+	padding: 0px;
+	box-sizing: border-box;
+}
+
+.home ul,
+ol {
+	list-style: none;
+}
+
+.home a {
+	text-decoration: none;
+}
+
+/*  */
+.home {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+}
+
+.container {
+	width: 100%;
+	margin: 10% 10%;
+	padding: 0 5%;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.container .suffer {
+	height: 100%;
+}
+
+.container .inner {
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.inner p {
+	font-family: "EliceDigitalBaeum_Bold";
+	font-size: 2vw;
+}
+
+.inner img {
+	width: 20vw;
+	margin-top: 10px;
+}
+
+.inner .linkGroup {
+	display: flex;
+	flex-direction: column;
+}
+
+.inner .linkGroup div {
+	padding: 5px 10px;
+	margin: 10px 0;
+	font-family: "EliceDigitalBaeum_Regular";
+	font-size: 1.8vw;
+	border: 1px solid #8a9cb3;
+	border-radius: 1.2vw;
+	box-shadow: 3px 3px 3px 3px #8a9cb3a9;
+	color: rgba(0, 0, 0, 0.59);
+	font-weight: bold;
+	transition-duration: 0.3s;
+}
+
+.inner .linkGroup div:active {
+	margin-left: 5px;
+	margin-top: 5px;
+	box-shadow: none;
+}

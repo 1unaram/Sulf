@@ -8,6 +8,14 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: "EliceDigitalBaeum_Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* 초기화 */
 * {
 	margin: 0px;
@@ -25,60 +33,100 @@ ol {
 }
 
 /* 본문 */
-.post .container {
+.container {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 3vw 10vw;
 }
 
-.post .container img {
+.container img {
 	width: 30px;
 	margin: 1vw 0;
+	cursor: pointer;
 }
 
-.post .container .titleBox,
-.idBox,
+.titleBox,
+.deadlineBox,
+.urlBox,
+.category,
 .targetBox,
-.periodBox,
-.descriptionBox,
-.urlBox {
+.descriptionBox {
 	margin: 1vw 3vw;
-	min-height: 50px;
-	background-color: rgba(156, 171, 194, 0.35);
+	padding: 0 10px;
 	display: flex;
 	align-items: center;
+	font-family: "EliceDigitalBaeum_Regular";
+	background-color: rgba(156, 171, 194, 0.35);
+	font-weight: bold;
+	font-size: 20px;
+}
+
+/* 제목 */
+.titleBox {
+	max-width: 650px;
+	min-height: 80px;
 	font-family: "EliceDigitalBaeum_Bold";
+	font-size: 28px;
 }
 
-.post .container .titleBox {
-	width: 400px;
-	min-height: 50px;
+/* 마감 */
+.deadlineBox {
+	max-width: 300px;
+	min-height: 30px;
+}
+.deadlineBox p {
+	margin: 0 10px;
+	font-weight: normal;
 }
 
-.post .container .idBox {
-	width: 400px;
-	min-height: 50px;
-}
-.post .container .targetBox {
-	width: 400px;
-	min-height: 50px;
-}
-.post .container .periodBox {
-	width: 400px;
-	min-height: 50px;
-}
-.post .container .descriptionBox {
-	width: 400px;
-	min-height: 50px;
-}
-.post .container .urlBox {
-	width: 400px;
-	min-height: 50px;
-}
-
-.post .container hr {
+/* 수직선 */
+hr {
+	margin: 10px 0;
 	height: 4px;
 	background-color: black;
 	border-radius: 10px;
+}
+
+/* url */
+.urlBox {
+	max-width: 700px;
+	padding: 10px;
+}
+.urlBox p {
+	min-width: 100px;
+	max-width: 500px;
+}
+.urlBox a {
+	font-weight: normal;
+	color: inherit;
+	text-decoration: underline;
+}
+
+/* 분류 */
+.category {
+	max-width: 150px;
+}
+.category p {
+	margin-left: 15px;
+	font-weight: normal;
+}
+
+/* 대상 */
+.targetBox {
+	max-width: 300px;
+}
+.targetBox p {
+	margin-left: 15px;
+	font-weight: normal;
+}
+
+/* 설명 */
+.descriptionBox {
+	max-width: 100%;
+	min-height: 40vh;
+	display: flex;
+	align-items: flex-start;
+	padding: 20px 20px;
+	font-weight: normal;
 }

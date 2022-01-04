@@ -1,6 +1,6 @@
 /* 설문조사 단일 포스트 */
 import React from 'react'
-import { useLocation } from 'react-router';
+import { useLocation, useNavigate } from 'react-router';
 
 // 컴포넌트 연결
 import style from './styles/Post.module.css';
@@ -8,7 +8,22 @@ import PageHeader from '../DetailedComponents/PageHeader.js';
 
 const Post = () => {
 
-    const postInfo = useLocation(); 
+    // 설문 정보 받아오기
+    const postInfo = useLocation();
+
+    // 뒤로가기를 위한 hooks
+    const navigate = useNavigate();
+    const goBack = () => {
+        navigate(-1);
+    }
+
+    // 카테고리
+    const cate = {
+        social: "사회",
+        nature: "자연",
+        art: "예술",
+        etc: "기타"
+    }
 
     return (
         <div className={style.post}>
@@ -21,16 +36,24 @@ const Post = () => {
 
             <div className={style.container}>
 
-                <img src="img/back.png" alt="back_png"></img>
-                
-                <div className={style.titleBox}>{postInfo.state.title}</div>
-                <div className={style.idBox}>{postInfo.state.id}</div>
-                <hr />
-                <div className={style.targetBox}>{postInfo.state.target}</div>
-                <div className={style.periodBox}>{postInfo.state.deadline}</div>
-                <div className={style.descriptionBox}>{postInfo.state.description}</div>
-                <div className={style.urlBox}>{postInfo.state.url}</div>
+                <img src="img/back.png" alt="back_png" onClick={goBack}></img>
 
+                <p className={style.titleBox}><p>{postInfo.state.title}</p></p>
+                <p className={style.deadlineBox}>
+                    기간 :<p>{postInfo.state.deadline}</p>까지
+                </p>
+                <hr />
+                <p className={style.urlBox}>
+                    <p>설문 링크 :</p>
+                    <a href={postInfo.state.url} target='_blank' rel="noreferrer" >{postInfo.state.url}</a>
+                </p>
+                <p className={style.category}>
+                    분류 :<p>{cate[postInfo.state.category]}</p>
+                </p>
+                <p className={style.targetBox}>
+                    대상 :<p>{postInfo.state.target}</p>
+                </p>
+                <p className={style.descriptionBox}>{postInfo.state.description}</p>
             </div>
         </div>
     )

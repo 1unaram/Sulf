@@ -12,7 +12,7 @@ const Postsurvey = () => {
     /* useInput */
     const [postData, setPostData] = useState({
         title: "",
-        category: "",
+        category: "social",
         target: "",
         deadline: "",
         description: "",
@@ -25,37 +25,18 @@ const Postsurvey = () => {
     }
 
     /* 등록 */
-    const fetchPost = (e) => {
+    const fetchPost = async (e) => {
         e.preventDefault();
-        // fetch("http://localhost:8080/sendPost", {
-        //     method: "POST",
-        //     headers: {
-        //         "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //         title: title,
-        //         category: category,
-        //         target: target,
-        //         deadline: deadline,
-        //         description: description,
-        //         url: url,
-        //     }),
-        // }).then((res) => {
-        //     if (res.ok) {
-        //         console.log("완료")
-        //     } else {
-        //         console.log("실패")
-        //     }
-        // }).then(console.log("hi))"))
 
-        axios.post("http://localhost:8080/sendPost", {
+        const response = await axios.post("/uploadSurvey", {
             title: postData.title,
             category: postData.category,
             target: postData.target,
             deadline: postData.deadline,
             description: postData.description,
             url: postData.url,
-        }).then(res => console(res.data));
+        });
+        console.log(response.data)
 
     }
 

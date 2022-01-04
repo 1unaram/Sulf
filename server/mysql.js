@@ -7,13 +7,4 @@ var connection = mysql.createConnection({
     database: 'sulfDB'
 });
 
-connection.connect();
-
-connection.query('select * from user', function (error, results, fields) {
-    if (error) {
-        console.log(error);
-    }
-    console.log(results);
-});
-
-connection.end();
+module.exports = connection;

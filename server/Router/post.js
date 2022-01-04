@@ -1,4 +1,6 @@
 const express = require("express");
+// const mysql = require("mysql");
+// const connection = require("./mysql");
 const router = express.Router();
 
 const fs = require("fs");
@@ -11,25 +13,13 @@ router.get("/", (req, res) => {
 module.exports = router;
 
 // 윤석's
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({ extended: true}));
+// router.use(bodyParser.json());
+// router.use(bodyParser.urlencoded({ extended: true }));
 
-// const conf = JSON.parse(data);
-// const mysql = require("mysql");
-
-// const connection = mysql.createConnection({
-//     host : conf.host,
-//     user: conf.user,
-//     password : conf.password,
-//     port : conf.port,
-//     database: conf.database
-// });
-// connection.connect();
-
-// app.get('/postReq', (req, res) => { //불러오는 경로.
+// router.get('/postReq', (req, res) => { //불러오는 경로.
 //     connection.query(
 //         "SELECT*FROM USER",
-//         (err,rows,fields) => {
+//         (err, rows, fields) => {
 //             res.send(rows);
 //         }
 //     );

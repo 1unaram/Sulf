@@ -47,9 +47,12 @@ const Post = () => {
                     <p>설문 링크 :</p>
                     <a href={postInfo.state.url} target='_blank' rel="noreferrer" >{postInfo.state.url}</a>
                 </p>
-                <p className={style.category}>
-                    분류 :<p>{cate[postInfo.state.category]}</p>
-                </p>
+                <div className={style.inner}>
+                    <p className={style.category}>
+                        분류 :<p>{cate[postInfo.state.category]}</p>
+                    </p>
+                    <img src={`img/classification/${postInfo.state.category}.png`} alt="category_png"/>
+                </div>
                 <p className={style.targetBox}>
                     대상 :<p>{postInfo.state.target}</p>
                 </p>

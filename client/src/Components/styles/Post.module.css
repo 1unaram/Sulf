@@ -57,7 +57,8 @@ ol {
 	display: flex;
 	align-items: center;
 	font-family: "EliceDigitalBaeum_Regular";
-	background-color: rgba(156, 171, 194, 0.35);
+	background-color: rgba(180, 201, 254, 0.76);
+	border-radius: 4px;
 	font-weight: bold;
 	font-size: 20px;
 }
@@ -91,7 +92,7 @@ hr {
 /* url */
 .urlBox {
 	max-width: 700px;
-	padding: 10px;
+	min-height: 50px;
 }
 .urlBox p {
 	min-width: 100px;
@@ -104,17 +105,25 @@ hr {
 }
 
 /* 분류 */
-.category {
-	max-width: 150px;
+.inner {
+	display: flex;
 }
-.category p {
+.inner .category {
+	width: 200px;
+	height: 50px;
+}
+.inner .category p {
 	margin-left: 15px;
 	font-weight: normal;
+}
+.inner img {
+	width: 50px;
 }
 
 /* 대상 */
 .targetBox {
 	max-width: 300px;
+	height: 60px;
 }
 .targetBox p {
 	margin-left: 15px;

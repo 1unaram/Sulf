@@ -7,6 +7,13 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: "EliceDigitalBaeum_Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 
 /* 초기화 */
 * {
@@ -25,24 +32,122 @@ ol {
 }
 
 /* 본문 */
-.postsurvey .container {
+.container {
 	width: 100%;
-	min-height: 600px;
 	display: flex;
-	justify-content: center;
 	flex-direction: column;
-	align-items: center;
+	padding: 3vw 10vw;
 }
 
-.postsurvey .container .inputBox {
-	margin: 20px;
-	width: 60vw;
-	height: 40px;
+.titleBox,
+.deadlineBox,
+.urlBox,
+.categoryBox,
+.targetBox,
+.descriptionBox {
+	margin: 1vw 3vw;
 	padding: 0 10px;
-	background-color: rgba(156, 171, 194, 0.35);
-	border-radius: 3px;
+	display: flex;
+	align-items: center;
+	font-family: "EliceDigitalBaeum_Regular";
+	background-color: rgba(180, 201, 254, 0.76);
+	border-radius: 4px;
+	font-size: 20px;
+	border-top: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid gray;
+	border-bottom: 2px solid gray;
 }
-.postsurvey .container .submitBtn {
+
+input::placeholder {
+	font-size: 18px;
+	color: gray
+}
+
+/* 제목 */
+.titleBox{
+	max-width: 620px;
+	min-height: 65px;
+	font-size: 22px;
+}
+
+/* 마감 */
+.deadlineInner {
+	display: flex;
+	align-items: center;
+}
+.deadlineInner .deadlineBox {
+	max-width: 560px;
+	max-height: 50px;
+}
+.deadlineInner .deadlineBox p {
+	font-size: 18px;
+	color: gray
+}
+.deadlineInner .checkbox {
+	width: 30px;
+	height: 30px;
+}
+.deadlineInner .noDeadline {
+	margin-left: 10px;
+	font: 20px "EliceDigitalBaeum_Regular";
+}
+
+/* 수직선 */
+hr {
+	margin: 10px 0;
+	height: 4px;
+	background-color: black;
+	border-radius: 10px;
+}
+
+/* url */
+.urlBox {
+	max-width: 700px;
+	min-height: 40px;
+}
+
+/* 분류 */
+.categoryBox {
+	display: flex;
+	max-width: 400px;
+	height: 50px;
+}
+.categoryBox p {
+	font-size: 18px;
+	color: gray
+}
+.categoryBox .selectBox {
+	margin: 0 50px;
+	width: 80px;
+	height: 40px;
+	font: 15px "EliceDigitalBaeum_Regular";
+	background-color: rgba(0,0,0, 0);
+	
+}
+
+/* 대상 */
+.targetBox {
+	max-width: 300px;
+	height: 60px;
+}
+.targetBox p {
+	margin-left: 15px;
+	font-weight: normal;
+}
+
+/* 설명 */
+.descriptionBox {
+	max-width: 100%;
+	min-height: 40vh;
+	display: flex;
+	align-items: flex-start;
+	padding: 20px 20px;
+	font-weight: normal;
+}
+
+/* 제출 버튼 */
+.submitBtn {
 	width: 50px;
 	height: 40px;
 	background-color: rgb(246, 148, 0);

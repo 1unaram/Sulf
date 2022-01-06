@@ -25,10 +25,10 @@ const Postsurvey = () => {
     }
 
     /* 등록 */
-    const fetchPost = async (e) => {
+    const fetchPost = (e) => {
         e.preventDefault();
 
-        const response = await axios.post("/uploadSurvey", {
+        axios.post("/uploadSurvey", {
             title: postData.title,
             category: postData.category,
             target: postData.target,
@@ -36,7 +36,6 @@ const Postsurvey = () => {
             description: postData.description,
             url: postData.url,
         });
-        console.log(response)
     }
 
     return (
@@ -58,7 +57,7 @@ const Postsurvey = () => {
                         <input className={style.deadlineBox} id="deadline" type="date" onChange={handle} />
                     </div>
                     <input className={style.checkbox} type="checkbox" />
-                    <p className={style.noDeadline}>설문 기한 없음</p> 
+                    <p className={style.noDeadline}>설문 기한 없음</p>
                 </div>
 
                 <hr />
@@ -68,7 +67,7 @@ const Postsurvey = () => {
                 <div className={style.categoryBox}>
                     <p>카테고리를 선택해주세요 :</p>
                     <select className={style.selectBox} id="category" onClick={handle}>
-                        <option value="social">사회</option>  
+                        <option value="social">사회</option>
                         <option value="nature">자연</option>
                         <option value="art">예술</option>
                         <option value="etc">기타</option>
@@ -79,7 +78,7 @@ const Postsurvey = () => {
 
 
                 <input className={style.descriptionBox} id="description" type="text" placeholder="설문 소개를 입력해주세요." onChange={handle} />
-                <button className={style.submitBtn} type="submit">등록</button>
+                <button className={style.submitBtn} type="submit" onClick={fetchPost}>등록</button>
             </div>
 
         </div >

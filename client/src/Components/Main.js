@@ -29,7 +29,6 @@ const Main = () => {
         axios.get("/postReq")
             .then((res) => {
                 setPostInfos(res.data.data);
-                console.log(res.data);
             })
             .then(setLoading(false));
     };
@@ -77,15 +76,16 @@ const Main = () => {
                     </div>
 
                     <div className={style.wrapper}>
-                        {loading || sortedByViews.length === 0 ?
-                            "loading..."
-                            :
-                            [...Array(3)].map((n, index) => (
-                                <PostBox
-                                    key={sortedByViews[index].id}
-                                    postInfo={sortedByViews[index]}
-                                />
-                            ))
+                        {
+                            loading || (sortedByViews.length === 0) ?
+                                "loading..."
+                                :
+                                [...Array(3)].map((n, index) => (
+                                    <PostBox
+                                        key={sortedByViews[index].id}
+                                        postInfo={sortedByViews[index]}
+                                    />
+                                ))
                         }
                     </div>
                 </div>

@@ -17,8 +17,8 @@ const uploadSurvey = require("./Router/uploadSurvey");
 app.use("/uploadSurvey", uploadSurvey);  // ./Router/uploadSurvey.js에서 처리
 
 // db 연결
-// const connection = require("./mysql")
-// connection.connect();
+const connection = require("./mysql")
+connection.connect();
 
 // 8080번 포트넘버를 가진 서버 생성
 app.listen(app.get('port'), () => {

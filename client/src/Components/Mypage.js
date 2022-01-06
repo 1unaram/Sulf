@@ -23,9 +23,9 @@ const Mypage = () => {
                     <p>인증</p>
                 </div>
                 <div className={style.container}>
-                    <div><img src="img/certification/certification1.png"></img></div>
-                    <div><img src="img/certification/certification2.png"></img></div>
-                    <div><img src="img/certification/certification3.png"></img></div>
+                    <div><img src="img/certification/certification1.png" alt="cert1_png"></img></div>
+                    <div><img src="img/certification/certification2.png" alt="cert2_png"></img></div>
+                    <div><img src="img/certification/certification3.png" alt="cert3_png"></img></div>
                 </div>
             </section>
         </div>

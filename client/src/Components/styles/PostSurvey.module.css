@@ -50,7 +50,7 @@ ol {
 	display: flex;
 	align-items: center;
 	font-family: "EliceDigitalBaeum_Regular";
-	background-color: rgba(180, 201, 254, 0.76);
+	background-color: rgba(180, 201, 254, 0.5);
 	border-radius: 4px;
 	font-size: 20px;
 	border-top: 2px solid black;
@@ -61,11 +61,11 @@ ol {
 
 input::placeholder {
 	font-size: 18px;
-	color: gray
+	color: gray;
 }
 
 /* 제목 */
-.titleBox{
+.titleBox {
 	max-width: 620px;
 	min-height: 65px;
 	font-size: 22px;
@@ -82,7 +82,7 @@ input::placeholder {
 }
 .deadlineInner .deadlineBox p {
 	font-size: 18px;
-	color: gray
+	color: gray;
 }
 .deadlineInner .checkbox {
 	width: 30px;
@@ -115,15 +115,14 @@ hr {
 }
 .categoryBox p {
 	font-size: 18px;
-	color: gray
+	color: gray;
 }
 .categoryBox .selectBox {
 	margin: 0 50px;
 	width: 80px;
 	height: 40px;
 	font: 15px "EliceDigitalBaeum_Regular";
-	background-color: rgba(0,0,0, 0);
-	
+	background-color: rgba(0, 0, 0, 0);
 }
 
 /* 대상 */
@@ -144,6 +143,7 @@ hr {
 	align-items: flex-start;
 	padding: 20px 20px;
 	font-weight: normal;
+	border: none;
 }
 
 /* 제출 버튼 */

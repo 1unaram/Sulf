@@ -14,7 +14,9 @@ app.use("/postReq", post);  // ./Router/post.js에서 처리
 app.use(bodyParser.json())
 app.use(cors());
 const uploadSurvey = require("./Router/uploadSurvey");
+const countupViews = require("./Router/countupViews");
 app.use("/uploadSurvey", uploadSurvey);  // ./Router/uploadSurvey.js에서 처리
+app.use("/countupViews", countupViews);
 
 // db 연결
 const connection = require("./mysql")

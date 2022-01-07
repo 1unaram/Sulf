@@ -1,14 +1,20 @@
 /* 홈 */
 
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom';
 
 // 컴포넌트 연결
 import style from './styles/Home.module.css';
 
 const Home = () => {
+
+    useEffect(() => {
+        document.querySelector('body').style.overflow = "hidden";
+    })
+
     return (
         <div className={style.home}>
+
             <div className={style.container}>
                 <img className={style.suffer} src="img/logo/suffer.png" alt="suffer_logo" />
 
@@ -23,6 +29,14 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            <div className={style.wrapper}>
+                <div className={style.ocean}>
+                    <div className={style.wave}></div>
+                    <div className={style.wave}></div>
+                </div>
+            </div>
+
         </div>
     )
 }

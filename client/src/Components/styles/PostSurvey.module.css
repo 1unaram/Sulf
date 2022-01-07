@@ -53,8 +53,8 @@ ol {
 	background-color: rgba(180, 201, 254, 0.5);
 	border-radius: 4px;
 	font-size: 20px;
-	border-top: 2px solid black;
-	border-left: 2px solid black;
+	border-top: 2px solid gray;
+	border-left: 2px solid gray;
 	border-right: 2px solid gray;
 	border-bottom: 2px solid gray;
 }
@@ -77,7 +77,7 @@ input::placeholder {
 	align-items: center;
 }
 .deadlineInner .deadlineBox {
-	max-width: 560px;
+	max-width: 620px;
 	max-height: 50px;
 }
 .deadlineInner .deadlineBox p {
@@ -132,7 +132,6 @@ hr {
 }
 .targetBox p {
 	margin-left: 15px;
-	font-weight: normal;
 }
 
 /* 설명 */
@@ -140,10 +139,7 @@ hr {
 	max-width: 100%;
 	min-height: 40vh;
 	display: flex;
-	align-items: flex-start;
 	padding: 20px 20px;
-	font-weight: normal;
-	border: none;
 }
 
 /* 제출 버튼 */
@@ -151,7 +147,14 @@ hr {
 	width: 50px;
 	height: 40px;
 	background-color: rgb(246, 148, 0);
-	border: none;
+	border: 2px solid gray;
 	border-radius: 30px;
 	font: normal 1.2rem EliceDigitalBaeum_Bold;
+	cursor: pointer;
+	align-self: center;
+}
+
+.submitBtn:active {
+	box-shadow: inset -2px -2px 3px rgba(242, 198, 36, 0.6),
+		inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }

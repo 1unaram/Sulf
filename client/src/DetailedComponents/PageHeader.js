@@ -17,20 +17,26 @@ const PageHeader = (
     const destination = {
         "Home": "/main",
         "Login": "/login",
-        "My Page": "/mypage",
+        "My Page": "/main",
         "About us": "/aboutus",
         "Service": "/service",
         "How to use": "/howtouse",
         "Post Survey": "/postsurvey",
     };
 
+    // body overflow 설정
+    const setOverflow = () => {
+        document.querySelector('body').style.overflow = "hidden";
+    }
     return (
         <header className={style.pageheader}>
             <div className={style.inner}>
 
                 {isLogo ?
                     <div className={style.logo}>
-                        <Link to="/"><img src="img/logo/logo1.png" alt="main_logo"></img></Link>
+                        <Link to="/">
+                            <img src="img/logo/logo1.png" alt="main_logo" onClick={setOverflow} />
+                        </Link>
                     </div>
                     :
                     <div className={style.title}>

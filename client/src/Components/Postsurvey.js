@@ -1,11 +1,12 @@
 /* 설문 등록 */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 
 // 컴포넌트 연결
 import style from './styles/PostSurvey.module.css';
 import PageHeader from '../DetailedComponents/PageHeader.js';
-import axios from 'axios';
+import ConfirmModal from '../DetailedComponents/ConfirmModal';
 
 const Postsurvey = () => {
 
@@ -25,9 +26,7 @@ const Postsurvey = () => {
     }
 
     /* 등록 */
-    const fetchPost = (e) => {
-        e.preventDefault();
-
+    const fetchPost = () => {
         axios.post("/uploadSurvey", {
             title: postData.title,
             category: postData.category,
@@ -38,8 +37,21 @@ const Postsurvey = () => {
         });
     }
 
+    /* 등록 팝업 */
+    const [popUp, setPopUp] = useState(false);
+    const [doUpload, setDoUpLoad] = useState(false);
+    useEffect(() => {
+        doUpload && fetchPost();
+    }, [doUpload]);
+
     return (
         <div className={style.postsurvey}>
+
+            <ConfirmModal
+                trigger={popUp}
+                setTrigger={setPopUp}
+                setUpload={setDoUpLoad}
+            />
 
             <PageHeader
                 title="설문 등록"
@@ -78,9 +90,9 @@ const Postsurvey = () => {
 
 
                 <input className={style.descriptionBox} id="description" type="text" placeholder="설문 소개를 입력해주세요." onChange={handle} />
-                <button className={style.submitBtn} type="submit" onClick={fetchPost}>등록</button>
-            </div>
+                <button className={style.submitBtn} type="submit" onClick={() => setPopUp(true)}>등록</button>
 
+            </div>
         </div >
     )
 }

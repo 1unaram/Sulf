@@ -47,12 +47,13 @@ ol {
 }
 
 .titleBox,
+.dateBox,
+.viewsBox,
 .deadlineBox,
 .urlBox,
 .category,
 .targetBox,
 .descriptionBox {
-	margin: 1vw 3vw;
 	padding: 0 10px;
 	display: flex;
 	align-items: center;
@@ -65,14 +66,43 @@ ol {
 
 /* 제목 */
 .titleBox {
+	margin: 1vw 3vw;
 	max-width: 650px;
 	min-height: 80px;
 	font-family: "EliceDigitalBaeum_Bold";
 	font-size: 28px;
 }
 
+/* 등록 날짜 & 조회수 */
+.wrapper1 {
+	width: 100%;
+	display: flex;
+	align-items: center;
+}
+.dateBox {
+	margin: 1vw 3vw;
+	min-height: 30px;
+}
+.dateBox p {
+	margin: 0 10px;
+	font-weight: normal;
+	font-size: 18px;
+}
+.viewsBox {
+	margin-left: 20px;
+	width: 150px;
+	max-height: 30px;
+}
+.viewsBox p {
+	max-width: 20px;
+	margin: 0 10px;
+	font-weight: normal;
+	font-size: 18px;
+}
+
 /* 마감 */
 .deadlineBox {
+	margin: 1vw 3vw;
 	max-width: 300px;
 	min-height: 30px;
 }
@@ -91,6 +121,7 @@ hr {
 
 /* url */
 .urlBox {
+	margin: 1vw 3vw;
 	max-width: 700px;
 	min-height: 50px;
 }
@@ -105,23 +136,24 @@ hr {
 }
 
 /* 분류 */
-.inner {
+.wrapper2 {
 	display: flex;
 }
-.inner .category {
-	width: 200px;
+.wrapper2 .category {
+	margin: 1vw 3vw;
 	height: 50px;
 }
-.inner .category p {
-	margin-left: 15px;
+.wrapper2 .category p {
+	margin: 0 15px;
 	font-weight: normal;
 }
-.inner img {
+.wrapper2 img {
 	width: 50px;
 }
 
 /* 대상 */
 .targetBox {
+	margin: 1vw 3vw;
 	max-width: 300px;
 	height: 60px;
 }
@@ -132,6 +164,7 @@ hr {
 
 /* 설명 */
 .descriptionBox {
+	margin: 1vw 3vw;
 	max-width: 100%;
 	min-height: 40vh;
 	display: flex;

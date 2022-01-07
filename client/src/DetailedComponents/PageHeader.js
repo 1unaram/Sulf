@@ -20,7 +20,7 @@ const PageHeader = (
         "My Page": "/main",
         "About us": "/aboutus",
         "Service": "/service",
-        "How to use": "/howtouse",
+        "How to use": "/main",
         "Post Survey": "/postsurvey",
     };
 

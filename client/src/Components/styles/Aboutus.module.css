@@ -7,6 +7,13 @@
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+	font-family: "EliceDigitalBaeum_Regular";
+	src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff")
+		format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
 
 /* 초기화 */
 * {
@@ -92,18 +99,21 @@ ol {
 	align-items: center;
 }
 
-.aboutus .introduction .box2 .developer .photo {
+.aboutus .introduction .box2 .developer .ram,
+.seok,
+.yoon {
 	min-width: 18vw;
 	min-height: 18vw;
 	max-width: 18vw;
 	max-height: 18vw;
-	border: 1px solid #ddd;
-	border-radius: 50%;
 }
 
 .aboutus .introduction .box2 .developer .state {
-	width: 18vw;
-	height: 30vh;
+	width: 20vw;
 	border: 1px solid #ddd;
 	margin: 20px 20px;
+	padding: 10px 10px;
+	background-color: rgba(180, 201, 254, 0.5);
+	font-family: "EliceDigitalBaeum_Regular";
+	font-size: 1.5rem;
 }

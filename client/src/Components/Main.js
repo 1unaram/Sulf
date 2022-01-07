@@ -68,7 +68,7 @@ const Main = () => {
             <nav>
                 <div className={style.inner}>
                     <ul className={style.gnb}>
-                        <li><Link to="/howtouse">사이트 안내</Link></li>
+                        <li><Link to="/main">사이트 안내</Link></li>
                         <li><Link to="/classification">분류</Link></li>
                         <li><Link to="/postsurvey">설문 등록</Link></li>
                         <li><Link to="/main">마이페이지</Link></li>

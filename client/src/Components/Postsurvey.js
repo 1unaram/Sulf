@@ -1,11 +1,12 @@
 /* 설문 등록 */
 
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
+import axios from 'axios';
 
 // 컴포넌트 연결
 import style from './styles/PostSurvey.module.css';
 import PageHeader from '../DetailedComponents/PageHeader.js';
-import axios from 'axios';
+import ConfirmModal from '../DetailedComponents/ConfirmModal';
 
 const Postsurvey = () => {
 
@@ -25,10 +26,8 @@ const Postsurvey = () => {
     }
 
     /* 등록 */
-    const fetchPost = async (e) => {
-        e.preventDefault();
-
-        const response = await axios.post("/uploadSurvey", {
+    const fetchPost = () => {
+        axios.post("/uploadSurvey", {
             title: postData.title,
             category: postData.category,
             target: postData.target,
@@ -36,16 +35,23 @@ const Postsurvey = () => {
             description: postData.description,
             url: postData.url,
         });
-        console.log(response.data)
-
     }
 
-    // useEffect(() => {
-    //     fetchPost();
-    // }, [])
+    /* 등록 팝업 */
+    const [popUp, setPopUp] = useState(false);
+    const [doUpload, setDoUpLoad] = useState(false);
+    useEffect(() => {
+        doUpload && fetchPost();
+    }, [doUpload]);
 
     return (
         <div className={style.postsurvey}>
+
+            <ConfirmModal
+                trigger={popUp}
+                setTrigger={setPopUp}
+                setUpload={setDoUpLoad}
+            />
 
             <PageHeader
                 title="설문 등록"
@@ -54,26 +60,39 @@ const Postsurvey = () => {
                 isLogo={false}
             />
 
-            <form className={style.container} onSubmit={fetchPost}>
-                <input className={style.inputBox} id="title" type="text" placeholder="설문 제목을 입력해주세요." onChange={handle} />
+            <div className={style.container}>
+                <input className={style.titleBox} id="title" type="text" placeholder="설문 제목을 입력해주세요." onChange={handle} />
 
-                <select id="category" onClick={handle}>
-                    <option value="social">사회</option>
-                    <option value="nature">자연</option>
-                    <option value="art">예술</option>
-                    <option value="etc">기타</option>
-                </select>
+                <div className={style.deadlineInner}>
+                    <div className={style.deadlineBox}>
+                        <p>설문 마감 날짜를 입력해주세요 :</p>
+                        <input className={style.deadlineBox} id="deadline" type="date" onChange={handle} />
+                    </div>
+                    <input className={style.checkbox} type="checkbox" />
+                    <p className={style.noDeadline}>설문 기한 없음</p>
+                </div>
 
-                <input className={style.inputBox} id="target" type="text" placeholder="설문 대상을 입력해주세요." onChange={handle} />
+                <hr />
 
-                설문 마감일 선택해주세요<br />
-                <input className={style.inputBox} id="deadline" type="date" onChange={handle} />
+                <input className={style.urlBox} id="url" type="text" placeholder="설문 링크를 입력해주세요." onChange={handle} />
 
-                <input className={style.inputBox} id="description" type="text" placeholder="설문 소개를 입력해주세요." onChange={handle} />
-                <input className={style.inputBox} id="url" type="text" placeholder="설문 링크를 입력해주세요." onChange={handle} />
-                <button className={style.submitBtn} type="submit">등록</button>
-            </form>
+                <div className={style.categoryBox}>
+                    <p>카테고리를 선택해주세요 :</p>
+                    <select className={style.selectBox} id="category" onClick={handle}>
+                        <option value="social">사회</option>
+                        <option value="nature">자연</option>
+                        <option value="art">예술</option>
+                        <option value="etc">기타</option>
+                    </select>
+                </div>
 
+                <input className={style.targetBox} id="target" type="text" placeholder="설문 대상을 입력해주세요." onChange={handle} />
+
+
+                <input className={style.descriptionBox} id="description" type="text" placeholder="설문 소개를 입력해주세요." onChange={handle} />
+                <button className={style.submitBtn} type="submit" onClick={() => setPopUp(true)}>등록</button>
+
+            </div>
         </div >
     )
 }

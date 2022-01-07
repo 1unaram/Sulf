@@ -1,19 +1,10 @@
 var mysql = require('mysql');
 
 var connection = mysql.createConnection({
-    host: 'localhost',
+    host: '13.125.184.140',
     user: 'root',
-    password: 'dbstjr66',
+    password: 'zhavmTjfvm3!',
     database: 'sulfDB'
 });
 
-connection.connect();
-
-connection.query('select * from user', function (error, results, fields) {
-    if (error) {
-        console.log(error);
-    }
-    console.log(results);
-});
-
-connection.end();
+module.exports = connection;

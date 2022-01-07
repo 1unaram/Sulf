@@ -32,6 +32,7 @@ ol {
 	text-decoration: none;
 }
 
+/* 검색 상자 */
 .classfication .serchContainer {
 	width: 100%;
 	height: 140px;
@@ -65,11 +66,12 @@ ol {
 		inset 2px 2px 3px rgba(0, 0, 0, 0.6);
 }
 
+/* 카테고리 선택 */
 .classfication .list {
 	width: 100%;
 	height: 100px;
 	display: flex;
-	border-bottom: 1px solid #ddd;
+	border: 1px solid black;
 }
 
 .classfication .item {
@@ -77,13 +79,17 @@ ol {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-left: 0.5px solid #ddd;
-	border-right: 0.5px solid #ddd;
-	font: normal 1.5rem/1 "EliceDigitalBaeum_Bold";
+	border-left: 0.5px solid black;
+	border-right: 0.5px solid black;
+	font: normal 1.8rem/1 "EliceDigitalBaeum_Bold";
+	background-color: rgb(242, 198, 36);
 }
-
 .classfication .item p {
-	background-color: #f2c624;
+	cursor: pointer;
+}
+.classfication .item p:hover {
+	background: #555;
+	color: #fff;
 }
 
 /* 설문 포스트 박스 */
@@ -93,34 +99,28 @@ ol {
 	display: flex;
 	flex-direction: column;
 }
-
 .iconWrapper {
 	display: flex;
 	justify-content: flex-end;
 }
-
-.iconWrapper div {
+.iconWrapper .sortBy {
 	display: flex;
 	align-items: center;
 	margin: 30px 10px;
 	position: relative;
 	right: 40px;
 	font: normal 1rem/1 "EliceDigitalBaeum_Bold";
+	cursor: pointer;
 }
-
-.iconWrapper div img {
+.iconWrapper .sortBy img {
 	width: 30px;
 }
-
-.postboxContainer {
-	display: flex;
-	justify-content: center;
-}
-
 .postboxContainer .postWrapper {
-	margin: 0 30px;
+	display: flex;
+	margin: 10px 30px;
+}
+.postboxContainer .postWrapper .inner {
 	display: flex;
 	flex-flow: row wrap;
-	justify-content: flex-start;
-	/* align-content: space-around; */
+	justify-content: center;
 }
